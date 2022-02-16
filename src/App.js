@@ -1,15 +1,13 @@
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Main from "./main";
-
+import Main from "./main/main";
+import { Route, Routes } from 'react-router-dom'
+import Face from "./main/face";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Main />
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<Main />} />
+      <Route path="/face" element={<Face />} />
+    </Routes>
   );
 }
 
