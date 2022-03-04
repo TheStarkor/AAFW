@@ -1,0 +1,455 @@
+div {
+  margin: 0px;
+  padding: 0px;
+}
+
+#face1 {
+  position: absolute;
+  top: 25.5%;
+  left: 61.2%;
+  height: 8%;
+}
+
+#face2 {
+  position: absolute;
+  top: 32%;
+  left: 72.4%;
+  height: 8%;
+}
+
+#face3 {
+  position: absolute;
+  top: 34%;
+  left: 66.5%;
+  height: 8%;
+}
+
+#face4 {
+  position: absolute;
+  top: 44.5%;
+  left: 64.5%;
+  height: 8%;
+}
+
+#face5 {
+  position: absolute;
+  top: 42%;
+  left: 73.3%;
+  height: 8%;
+}
+
+#face6 {
+  position: absolute;
+  top: 53.5%;
+  left: 60%;
+  height: 8%;
+}
+
+#face7 {
+  position: absolute;
+  top: 51.5%;
+  left: 69.5%;
+  height: 8%;
+}
+
+.box {
+  transform-origin: top center;
+  animation-name: dangle;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  border-radius: 50%;
+}
+
+.box2 {
+  transform-origin: top center;
+  animation-name: dangle2;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  border-radius: 50%;
+}
+
+.box3 {
+  transform-origin: top center;
+  animation-name: dangle3;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  border-radius: 50%;
+}
+
+.box4 {
+  transform-origin: top center;
+  animation-name: dangle4;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  border-radius: 50%;
+}
+
+.box5 {
+  transform-origin: top center;
+  animation-name: dangle5;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  border-radius: 50%;
+}
+
+.box6 {
+  transform-origin: top center;
+  animation-name: dangle6;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  border-radius: 50%;
+}
+
+.box7 {
+  transform-origin: top center;
+  animation-name: dangle7;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  border-radius: 50%;
+}
+
+@keyframes dangle {
+  0% {
+    transform: rotate(0deg);
+  }
+  2% {
+    transform: rotate(7.5deg);
+  }
+  4% {
+    transform: rotate(-7deg);
+  }
+  6% {
+    transform: rotate(6.5deg);
+  }
+  8% {
+    transform: rotate(-6deg);
+  }
+  10% {
+    transform: rotate(5.5deg);
+  }
+  12% {
+    transform: rotate(-5deg);
+  }
+  14% {
+    transform: rotate(4.5deg);
+  }
+  16% {
+    transform: rotate(-4deg);
+  }
+  18% {
+    transform: rotate(3.5deg);
+  }
+  20% {
+    transform: rotate(-3deg);
+  }
+  22% {
+    transform: rotate(2deg);
+  }
+  24% {
+    transform: rotate(-1deg);
+  }
+  26% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes dangle2 {
+  10% {
+    transform: rotate(0deg);
+  }
+  12% {
+    transform: rotate(7.5deg);
+  }
+  14% {
+    transform: rotate(-7deg);
+  }
+  16% {
+    transform: rotate(6.5deg);
+  }
+  18% {
+    transform: rotate(-6deg);
+  }
+  20% {
+    transform: rotate(5.5deg);
+  }
+  22% {
+    transform: rotate(-5deg);
+  }
+  24% {
+    transform: rotate(4.5deg);
+  }
+  26% {
+    transform: rotate(-4deg);
+  }
+  28% {
+    transform: rotate(3.5deg);
+  }
+  30% {
+    transform: rotate(-3deg);
+  }
+  32% {
+    transform: rotate(2deg);
+  }
+  34% {
+    transform: rotate(-1deg);
+  }
+  36% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes dangle3 {
+  20% {
+    transform: rotate(0deg);
+  }
+  22% {
+    transform: rotate(7.5deg);
+  }
+  24% {
+    transform: rotate(-7deg);
+  }
+  26% {
+    transform: rotate(6.5deg);
+  }
+  28% {
+    transform: rotate(-6deg);
+  }
+  30% {
+    transform: rotate(5.5deg);
+  }
+  32% {
+    transform: rotate(-5deg);
+  }
+  34% {
+    transform: rotate(4.5deg);
+  }
+  36% {
+    transform: rotate(-4deg);
+  }
+  38% {
+    transform: rotate(3.5deg);
+  }
+  40% {
+    transform: rotate(-3deg);
+  }
+  42% {
+    transform: rotate(2deg);
+  }
+  44% {
+    transform: rotate(-1deg);
+  }
+  46% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes dangle4 {
+  30% {
+    transform: rotate(0deg);
+  }
+  32% {
+    transform: rotate(7.5deg);
+  }
+  34% {
+    transform: rotate(-7deg);
+  }
+  36% {
+    transform: rotate(6.5deg);
+  }
+  38% {
+    transform: rotate(-6deg);
+  }
+  40% {
+    transform: rotate(5.5deg);
+  }
+  42% {
+    transform: rotate(-5deg);
+  }
+  44% {
+    transform: rotate(4.5deg);
+  }
+  46% {
+    transform: rotate(-4deg);
+  }
+  48% {
+    transform: rotate(3.5deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+  52% {
+    transform: rotate(2deg);
+  }
+  54% {
+    transform: rotate(-1deg);
+  }
+  56% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes dangle5 {
+  40% {
+    transform: rotate(0deg);
+  }
+  42% {
+    transform: rotate(7.5deg);
+  }
+  44% {
+    transform: rotate(-7deg);
+  }
+  46% {
+    transform: rotate(6.5deg);
+  }
+  48% {
+    transform: rotate(-6deg);
+  }
+  50% {
+    transform: rotate(5.5deg);
+  }
+  52% {
+    transform: rotate(-5deg);
+  }
+  54% {
+    transform: rotate(4.5deg);
+  }
+  56% {
+    transform: rotate(-4deg);
+  }
+  58% {
+    transform: rotate(3.5deg);
+  }
+  60% {
+    transform: rotate(-3deg);
+  }
+  62% {
+    transform: rotate(2deg);
+  }
+  64% {
+    transform: rotate(-1deg);
+  }
+  66% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes dangle6 {
+  60% {
+    transform: rotate(0deg);
+  }
+  62% {
+    transform: rotate(7.5deg);
+  }
+  64% {
+    transform: rotate(-7deg);
+  }
+  66% {
+    transform: rotate(6.5deg);
+  }
+  68% {
+    transform: rotate(-6deg);
+  }
+  70% {
+    transform: rotate(5.5deg);
+  }
+  72% {
+    transform: rotate(-5deg);
+  }
+  74% {
+    transform: rotate(4.5deg);
+  }
+  76% {
+    transform: rotate(-4deg);
+  }
+  78% {
+    transform: rotate(3.5deg);
+  }
+  80% {
+    transform: rotate(-3deg);
+  }
+  82% {
+    transform: rotate(2deg);
+  }
+  84% {
+    transform: rotate(-1deg);
+  }
+  86% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes dangle7 {
+  70% {
+    transform: rotate(0deg);
+  }
+  72% {
+    transform: rotate(7.5deg);
+  }
+  74% {
+    transform: rotate(-7deg);
+  }
+  76% {
+    transform: rotate(6.5deg);
+  }
+  78% {
+    transform: rotate(-6deg);
+  }
+  80% {
+    transform: rotate(5.5deg);
+  }
+  82% {
+    transform: rotate(-5deg);
+  }
+  84% {
+    transform: rotate(4.5deg);
+  }
+  86% {
+    transform: rotate(-4deg);
+  }
+  88% {
+    transform: rotate(3.5deg);
+  }
+  90% {
+    transform: rotate(-3deg);
+  }
+  92% {
+    transform: rotate(2deg);
+  }
+  94% {
+    transform: rotate(-1deg);
+  }
+  96% {
+    transform: rotate(0deg);
+  }
+}
+
+.background {
+  transform-origin: 75% 75%;
+  animation-name: shrink;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shrink {
+  0% {
+    transform: scale(1);
+  }
+  33% {
+    transform: scale(0.96);
+  }
+  66% {
+    transform: scale(1);
+  }
+}
+
+/* @keyframes shrink {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.97);
+  }
+  100% {
+    transform: scale(1);
+  }
+} */
