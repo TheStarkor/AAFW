@@ -19,7 +19,7 @@ const Main = () => {
 
 
   useInterval(() => {
-    axios.get('https://c065-27-35-10-79.ngrok.io/images')
+    axios.get('https://bc22-27-35-10-79.ngrok.io/images')
       .then(res => {
         console.log(res.data);
         setImages(res.data.results)
