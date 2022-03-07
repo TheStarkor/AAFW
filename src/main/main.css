@@ -3,6 +3,13 @@ div {
   padding: 0px;
 }
 
+#face0 {
+  position: absolute;
+  top: 51.5%;
+  left: 69.5%;
+  height: 8%;
+}
+
 #face1 {
   position: absolute;
   top: 25.5%;
@@ -45,14 +52,15 @@ div {
   height: 8%;
 }
 
-#face7 {
-  position: absolute;
-  top: 51.5%;
-  left: 69.5%;
-  height: 8%;
+.box0 {
+  transform-origin: top center;
+  animation-name: dangle7;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  border-radius: 50%;
 }
 
-.box {
+.box1 {
   transform-origin: top center;
   animation-name: dangle;
   animation-duration: 7s;
@@ -95,14 +103,6 @@ div {
 .box6 {
   transform-origin: top center;
   animation-name: dangle6;
-  animation-duration: 7s;
-  animation-iteration-count: infinite;
-  border-radius: 50%;
-}
-
-.box7 {
-  transform-origin: top center;
-  animation-name: dangle7;
   animation-duration: 7s;
   animation-iteration-count: infinite;
   border-radius: 50%;

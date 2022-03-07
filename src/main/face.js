@@ -4,7 +4,6 @@ import axios from "axios";
 
 function Face() {
   const [data, setData] = useState(null);
-  const [type, setType] = useState(true);
   const [images, setImages] = useState([]);
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
@@ -40,16 +39,12 @@ function Face() {
         let data = new FormData();
         data.append('image', blob, 'image.png');
         try {
-          const resp = await axios.post(`http://localhost:5000/img`, data);
-          const new_images = [...images, resp.data];
-          console.log(images)
-          setImages(new_images)
-          setData(resp.data)
+          await axios.post(`https://089f-211-57-181-81.ngrok.io/img`, data);
         } catch (err) {
           console.log(err)
         }
       })
-    }, 10000)
+    }, 6000)
   }
   
   useEffect(() => {
@@ -75,18 +70,11 @@ function Face() {
 
   return (
     <div style={{ display: 'flex'}}>
-      {
-        type
-        ?
-        <>
-          <video id='video' autoPlay ref={videoRef} height={videoHeight} width={videoWidth} onPlay={handleImage} />
-          <canvas id='face' ref={canvasRef} height={videoHeight} width={videoWidth} style={{ position: 'absolute' }} />
-          <canvas id='2d' />
-          <img src={data} />
-        </>
-        : <>hi</>
-      }
-      <button onClick={() => setType(!type)}>press</button>
+      <video id='video' autoPlay ref={videoRef} height={videoHeight} width={videoWidth} onPlay={handleImage} />
+      <div style={{ display: 'none '}}>
+        <canvas id='face' ref={canvasRef} height={videoHeight} width={videoWidth} style={{ position: 'absolute' }} />
+        <canvas id='2d' />
+      </div>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import socketIOClient from "socket.io-client";
+import useInterval from '@use-it/interval';
 
 import one from './images/one.png';
 import two from './images/two.png';
@@ -7,17 +7,25 @@ import three from './images/three.png';
 import four from './images/four.png';
 import five from './images/five.png';
 import './main.css';
-
+import axios from 'axios';
 
 const Main = () => {
-  const [, updateState] = React.useState();
+  const [images, setImages] = useState([]);
   
   const imageStyle={
     position:'absolute',
     height: '100%',
   }
 
-  const imgSource = "https://yummeal-image.s3.ap-northeast-2.amazonaws.com/original/aafw"
+
+  useInterval(() => {
+    axios.get('https://089f-211-57-181-81.ngrok.io/images')
+      .then(res => {
+        console.log(res.data);
+        setImages(res.data.results)
+      })
+
+  }, 2000);
   
   return (
     <div style={{ 
@@ -34,13 +42,11 @@ const Main = () => {
       <img src={four} alt="as" style={imageStyle} />
       <img src={five} alt="as" style={imageStyle} className="background" />
 
-      <img src={`${imgSource}/test0.jpg`} alt="face" className="box" id="face1" />
-      <img src={`${imgSource}/test1.jpg`} alt="face" className="box7" id="face2" />
-      <img src={`${imgSource}/test2.jpg`} alt="face" className="box2" id="face3" />
-      <img src={`${imgSource}/test3.jpg`} alt="face" className="box3" id="face4" />
-      <img src={`${imgSource}/test4.jpg`} alt="face" className="box6" id="face5" />
-      <img src={`${imgSource}/test5.jpg`} alt="face" className="box5" id="face6" />
-      <img src={`${imgSource}/test6.jpg`} alt="face" className="box4" id="face7" />
+      {
+        images.map((image, index) => (
+          <img key={`image-${image}`} src={image} alt="face" className={`box${index}`} id={`face${index}`} />    
+        ))
+      }
     </div>
   )
 }
