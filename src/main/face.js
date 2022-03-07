@@ -71,8 +71,9 @@ function Face() {
   return (
     <div style={{ display: 'flex'}}>
       <video id='video' autoPlay ref={videoRef} height={videoHeight} width={videoWidth} onPlay={handleImage} />
+      <canvas id='face' ref={canvasRef} height={videoHeight} width={videoWidth} style={{ position: 'absolute' }} />
+
       <div style={{ display: 'none '}}>
-        <canvas id='face' ref={canvasRef} height={videoHeight} width={videoWidth} style={{ position: 'absolute' }} />
         <canvas id='2d' />
       </div>
     </div>
