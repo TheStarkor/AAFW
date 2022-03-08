@@ -27,35 +27,7 @@ function Face() {
       const resizedDetections = faceapi.resizeResults(detections, displaySize);
       canvasRef.current.getContext('2d').clearRect(0, 0, videoWidth, videoHeight)
       console.log(detections)
-      //faceapi.draw.drawDetections(canvasRef.current, resizedDetections)
-
-
-      if (resizedDetections) {
-        resizedDetections.forEach((detection) => {
-          const text = [
-            '36.5',
-          ]
-          const anchor = { x: detection.box.x + detection.box.width / 2 - detection.box.width/5, y: detection.box.y - detection.box.width/3 }
-          // see DrawTextField below
-          const drawOptions = {
-            backgroundColor: 'rgba(0, 0, 0, 0)',
-            fontColor: '#22F529',
-            fontSize: detection.box.width/6,
-            padding: 10
-          }
-          const box = { x: detection.box.x, y: detection.box.y, width: detection.box.width, height: detection.box.height }
-          const boxOptions = {
-            boxColor: '#22F529',
-            lineWidth: 5
-          }
-          
-          const drawBox = new faceapi.draw.DrawBox(box, boxOptions)
-          drawBox.draw(document.getElementById('canvas'))
-
-          const drawTextBox = new faceapi.draw.DrawTextField(text, anchor, drawOptions)
-          drawTextBox.draw(document.getElementById('canvas'))
-        })
-      }
+      faceapi.draw.drawDetections(canvasRef.current, resizedDetections)
 
 
 
@@ -98,23 +70,17 @@ function Face() {
       err => console.error(err))
   };
 
+  
   return (
-    <div className="face-container">
-        <video autoPlay ref={videoRef} className="face-video" onPlay={handleImage} id="video" />
-        {/* <video autoPlay ref={videoRef} height={videoHeight} width={videoWidth} onPlay={handleImage} /> */}
-        <canvas ref={canvasRef} className="face-video" id="canvas" />
+    <div style={{ display: 'flex'}}>
+      <video id='video' autoPlay ref={videoRef} height={videoHeight} width={videoWidth} onPlay={handleImage} />
+      <canvas id='face' ref={canvasRef} height={videoHeight} width={videoWidth} style={{ position: 'absolute' }} />
+
+      <div style={{ display: 'none '}}>
+        <canvas id='2d' />
+      </div>
     </div>
   );
-  // return (
-  //   <div style={{ display: 'flex'}}>
-  //     <video id='video' autoPlay ref={videoRef} height={videoHeight} width={videoWidth} onPlay={handleImage} />
-  //     <canvas id='face' ref={canvasRef} height={videoHeight} width={videoWidth} style={{ position: 'absolute' }} />
-
-  //     <div style={{ display: 'none '}}>
-  //       <canvas id='2d' />
-  //     </div>
-  //   </div>
-  // );
 }
 
 export default Face;
