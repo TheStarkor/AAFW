@@ -27,7 +27,33 @@ function Face() {
       const resizedDetections = faceapi.resizeResults(detections, displaySize);
       canvasRef.current.getContext('2d').clearRect(0, 0, videoWidth, videoHeight)
       console.log(detections)
-      faceapi.draw.drawDetections(canvasRef.current, resizedDetections)
+      //faceapi.draw.drawDetections(canvasRef.current, resizedDetections)
+      if (resizedDetections) {
+        resizedDetections.forEach((detection) => {
+          const text = [
+            '36.5',
+          ]
+          const anchor = { x: detection.box.x + detection.box.width / 2 - detection.box.width/5, y: detection.box.y - detection.box.width/3 }
+          // see DrawTextField below
+          const drawOptions = {
+            backgroundColor: 'rgba(0, 0, 0, 0)',
+            fontColor: '#22F529',
+            fontSize: detection.box.width/6,
+            padding: 10
+          }
+          const box = { x: detection.box.x, y: detection.box.y, width: detection.box.width, height: detection.box.height }
+          const boxOptions = {
+            boxColor: '#22F529',
+            lineWidth: 5
+          }
+          
+          const drawBox = new faceapi.draw.DrawBox(box, boxOptions)
+          drawBox.draw(document.getElementById('canvas'))
+
+          const drawTextBox = new faceapi.draw.DrawTextField(text, anchor, drawOptions)
+          drawTextBox.draw(document.getElementById('canvas'))
+        })
+      }
 
       const video = document.getElementById('video')
       const canvasSave = document.getElementById('2d');
@@ -39,7 +65,7 @@ function Face() {
         let data = new FormData();
         data.append('image', blob, 'image.png');
         try {
-          await axios.post(`https://461e-27-35-10-79.ngrok.io/img`, data);
+          await axios.post(`https://3a4b-27-35-10-79.ngrok.io/img`, data);
         } catch (err) {
           console.log(err)
         }
