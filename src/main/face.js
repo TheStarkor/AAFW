@@ -74,7 +74,7 @@ function Face() {
           console.log(err)
         }
       })
-    }, 150)
+    }, 6000)
   }
   
   useEffect(() => {
@@ -99,15 +99,22 @@ function Face() {
   };
 
   return (
-    <div style={{ display: 'flex'}}>
-      <video id='video' autoPlay ref={videoRef} height={videoHeight} width={videoWidth} onPlay={handleImage} />
-      <canvas id='face' ref={canvasRef} height={videoHeight} width={videoWidth} style={{ position: 'absolute' }} />
-
-      <div style={{ display: 'none '}}>
-        <canvas id='2d' />
-      </div>
+    <div className="face-container">
+        <video autoPlay ref={videoRef} className="face-video" onPlay={handleImage} id="video" />
+        {/* <video autoPlay ref={videoRef} height={videoHeight} width={videoWidth} onPlay={handleImage} /> */}
+        <canvas ref={canvasRef} className="face-video" id="canvas" />
     </div>
   );
+  // return (
+  //   <div style={{ display: 'flex'}}>
+  //     <video id='video' autoPlay ref={videoRef} height={videoHeight} width={videoWidth} onPlay={handleImage} />
+  //     <canvas id='face' ref={canvasRef} height={videoHeight} width={videoWidth} style={{ position: 'absolute' }} />
+
+  //     <div style={{ display: 'none '}}>
+  //       <canvas id='2d' />
+  //     </div>
+  //   </div>
+  // );
 }
 
 export default Face;
