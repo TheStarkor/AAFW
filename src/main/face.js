@@ -41,7 +41,7 @@ function Face() {
         let data = new FormData();
         data.append('image', blob, 'image.png');
         try {
-          await axios.post(`https://ec7f-27-35-10-79.ngrok.io/img`, data);
+          await axios.post(`https://5144-1-223-190-197.ngrok.io/img`, data);
         } catch (err) {
           console.log(err)
         }
