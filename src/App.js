@@ -3,6 +3,8 @@ import { Route, Routes } from 'react-router-dom'
 import Face from "./main/face";
 import Test from "./main/test";
 
+import './App.css'
+
 function App() {
   return (
     <Routes>
